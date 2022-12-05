@@ -1,0 +1,40 @@
+<div class="col-12">
+    <div class="card">
+        <div class="col-12">
+            <h5><strong>Usuários</strong></h5>
+        </div>
+        <div class="col-12 noHorizontal">
+         <span class="p-float-label p-input-icon-right w-full">
+            <i class="pi pi-search"></i>
+            <input type="text" class="w-full" id="search" pInputText>
+            <label for="search">Buscar Usuário</label>
+        </span>
+        </div>
+        <div class="formgrid grid mt-3">
+            <div class="col-3">
+                <div (click)="addUser()"
+                     class="card flex cardAddUser justify-content-center align-self-center cursor-pointer">
+                    <strong>Adicionar Usuário</strong>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <div class="col-12 inline-flex">
+                        <div class="col-8">
+                            <div>
+                                <span><strong>Nome:</strong> Henrique</span>
+                            </div>
+                            <div>
+                                <span><strong>Nick:</strong> ElGuapoLoko</span>
+                            </div>
+                        </div>
+                        <div class="col-4 text-right">
+                            <p-avatar icon="pi pi-pencil" (click)="editUser()" title="Editar" styleClass="mr-2" class="cursor-pointer"
+                                      shape="circle"></p-avatar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

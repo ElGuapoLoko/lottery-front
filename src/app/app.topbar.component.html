@@ -1,0 +1,31 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="/dashboard">
+        <img src="assets/layout/images/dofus/dofus-logo.png" alt="logo">
+    </a>
+
+    <a class="p-link layout-menu-button layout-topbar-button" href="#" (click)="appMain.toggleMenu($event)">
+        <i class="pi pi-bars"></i>
+    </a>
+
+    <a class="p-link layout-topbar-menu-button layout-topbar-button" href="#" (click)="appMain.toggleTopMenu($event)">
+        <i class="pi pi-ellipsis-v"></i>
+    </a>
+
+    <div class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active':appMain.topMenuActive}">
+        <p-avatar icon="pi pi-user" (click)="op.toggle($event)" styleClass="mr-2" class="cursor-pointer"
+                  shape="circle"></p-avatar>
+        <p-overlayPanel #op>
+            <ng-template pTemplate>
+                <div (click)="myAccount()" class="col-12 inline-flex cursor-pointer">
+                    <div class="col-4 noHorizontal"><i class="pi pi-user"></i></div>
+                    <div class="col-8 noHorizontal">Minha conta</div>
+                </div>
+
+                <div (click)="logout()" class="col-12 inline-flex cursor-pointer">
+                    <div class="col-4 noHorizontal"><i class="pi pi-times"></i></div>
+                    <div class="col-8 noHorizontal">Sair</div>
+                </div>
+            </ng-template>
+        </p-overlayPanel>
+    </div>
+</div>

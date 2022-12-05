@@ -1,0 +1,28 @@
+/* General */
+$fontSize:10px;
+$borderRadius:12px;
+$transitionDuration:.2s;
+
+
+::ng-deep .p-multiselect {
+    width: 100%;
+}
+
+::ng-deep .p-inputnumber {
+    width: 100%;
+}
+
+::ng-deep .p-inputtext {
+    width: 100%;
+}
+
+::ng-deep .p-password {
+    width: 100%;
+}
+
+.noHorizontal{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}

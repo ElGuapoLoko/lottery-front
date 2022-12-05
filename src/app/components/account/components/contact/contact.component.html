@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="twitch" id="twitch" pInputText>
+            <label for="twitch">Twitch (link)</label>
+        </span>
+        </div>
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="youtube" id="youtube" pInputText>
+            <label for="youtube">Youtube (link)</label>
+        </span>
+        </div>
+    </div>
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="instagram" id="instagram" pInputText>
+            <label for="instagram">Instagram (link)</label>
+        </span>
+        </div>
+        <div class="col-6">
+        <span class="p-float-label">
+            <p-inputMask class="w-full" id="whatsapp" formControlName="phone" mask="(99)9 9999-9999"></p-inputMask>
+            <label for="whatsapp">Telefone ( WhatsApp )</label>
+        </span>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,44 @@
+@import "src/assets/sass/layout/variables";
+
+.back-img {
+    background-image: url("../../../assets/layout/images/dofus/dofus-zaap.jpg");
+    position: relative;
+    height: 85vh;
+    width: 78vw;
+    background-size: cover;
+}
+
+.full-page {
+    height: 87vh;
+}
+
+.white-text {
+    color: white;
+}
+
+.circle {
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.name-user {
+    font-size: 1.7rem;
+}
+
+.line {
+    border: 1px dashed #d3d3d3;
+}
+
+::ng-deep .spaceTabView .p-tabview .p-tabview-nav {
+    justify-content: space-between;
+}

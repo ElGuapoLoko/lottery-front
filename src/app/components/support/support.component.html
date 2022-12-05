@@ -1,0 +1,81 @@
+<div class="col-12">
+    <div class="card">
+        <div class="col-12">
+            <h5><strong>Suporte</strong></h5>
+        </div>
+        <div class="col-12 noHorizontal">
+         <span class="p-float-label w-full">
+            <input type="text" class="w-full" [(ngModel)]="title" [disabled]="blockTitle" id="title-support" pInputText>
+            <label for="title-support">Titulo</label>
+        </span>
+        </div>
+        <div class="col-12 mt-2 noHorizontal">
+            <span class="p-float-label">
+            <textarea id="message" rows="5" [(ngModel)]="message" [disabled]="blockMessage" style="resize: none;"
+                      class="w-full" cols="30"
+                      pInputTextarea></textarea>
+            <label for="message">Descrição</label>
+        </span>
+        </div>
+        <div class="col-12 text-right">
+        </div>
+
+        <div class="col-12 inline-flex">
+            <div class="col-6">
+                <button *ngIf="blockSend" pButton pRipple type="button" label="Limpar" (click)="clear()"
+                        class="p-button-outlined p-button-secondary"></button>
+            </div>
+            <div class="col-6 text-right">
+                <button pButton pRipple type="button" [disabled]="blockSend" label="Enviar" icon="pi pi-check"
+                        class="p-button-success"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12">
+    <div class="card">
+        <div class="col-12">
+            <h5><strong>Histórico de suporte</strong></h5>
+        </div>
+        <div class="col-12 noHorizontal">
+         <span class="p-float-label p-input-icon-right w-full">
+             <i class="pi pi-search"></i>
+            <input type="text" class="w-full" id="search-for-title" pInputText>
+            <label for="search-for-title">Busca por titulo</label>
+        </span>
+        </div>
+        <div class="col-12 noHorizontal">
+            <p-table [value]="historiesSupport" responsiveLayout="scroll">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Ação</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-history>
+                    <tr>
+                        <td style="width:80%">{{history.title}}</td>
+                        <td style="width:20%">
+                            <div class="col-12 inline-flex">
+                                <div class="col-6">
+                                    <button pButton pRipple type="button" (click)="viewHistory(history)"
+                                            label="Visualizar" icon="pi pi-eye"
+                                            class="p-button-info"></button>
+                                </div>
+                                <div class="col-6">
+                                    <button pButton pRipple type="button" label="Excluir" (click)="confirm($event)" icon="pi pi-times"
+                                            class="p-button-danger"></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+<p-confirmDialog header="Tem certeza?" key="confirm-delete" icon="pi pi-exclamation-triangle" [acceptLabel]="'Sim'" [rejectLabel]="'Não'"
+                 [style]="{width: '350px'}" acceptButtonStyleClass="p-button-text" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+

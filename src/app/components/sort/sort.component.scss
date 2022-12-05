@@ -1,0 +1,29 @@
+@import "src/assets/sass/layout/variables";
+
+::ng-deep .tableSort .p-datatable-scrollable .p-datatable-wrapper{
+    overflow-x: hidden;
+}
+
+.jackpotImage {
+    background-image: url("../../../assets/layout/images/jackpot/jackpot.png");
+    height: 100%;
+    width: 47%;
+    position: fixed;
+    justify-content: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.nickPlayer{
+    position: absolute;
+    font-size: 35px;
+    color: black;
+    text-shadow: 0px 0px 5px greenyellow;
+}
+
+.container-nickPlayer{
+    display: flex;
+    position: relative;
+    left: 21rem;
+    top: -11rem;
+}

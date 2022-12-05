@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="name" id="name" pInputText>
+            <label for="name">Nome</label>
+        </span>
+        </div>
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="surname" id="surname" pInputText>
+            <label for="surname">Sobrenome</label>
+        </span>
+        </div>
+    </div>
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" id="nick" formControlName="nick" pInputText>
+            <label for="name">Nick</label>
+        </span>
+        </div>
+        <div class="col-6">
+        <span class="p-float-label">
+            <p-multiSelect class="w-full" id="games" optionLabel="name" [filter]="false"></p-multiSelect>
+            <label for="games">Jogos</label>
+        </span>
+        </div>
+    </div>
+</form>

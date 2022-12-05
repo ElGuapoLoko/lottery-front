@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <input type="text" class="w-full" formControlName="email" id="email" pInputText>
+            <label for="email">E-mail</label>
+        </span>
+        </div>
+        <div class="col-6">
+            <button *ngIf="form?.value?.validated_email == 0" pButton pRipple type="button" label="Enviar código de validação" icon="pi pi-check" class="p-button-info w-full"></button>
+            <button *ngIf="form?.value?.validated_email == 1" pButton pRipple type="button" label="E-mail validado :D" icon="pi pi-check" class="p-button-success w-full"></button>
+        </div>
+    </div>
+
+    <div class="col-12 inline-flex">
+        <div class="col-6">
+        <span class="p-float-label">
+            <p-password #Password [toggleMask]="true" [feedback]="false" id="password"></p-password>
+            <label for="password">Senha</label>
+        </span>
+        </div>
+        <div class="col-6">
+        <span class="p-float-label">
+            <p-password #ConfirmPassword [toggleMask]="true" [feedback]="false" id="confirm-password"></p-password>
+            <label for="confirm-password">Confirmar senha</label>
+        </span>
+        </div>
+    </div>
+</form>

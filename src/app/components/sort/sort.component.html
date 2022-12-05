@@ -1,0 +1,80 @@
+<div class="col-12">
+    <div class="card">
+        <div class="col-12">
+            <h5><strong>Sorteios</strong></h5>
+        </div>
+        <div class="col-12 noHorizontal">
+            <span class="p-float-label p-input-icon-right w-full">
+                <i class="pi pi-search"></i>
+                <p-multiSelect class="w-full" id="events" optionLabel="name"
+                               [filter]="false"></p-multiSelect>
+                <label for="events">Buscar Evento</label>
+            </span>
+        </div>
+
+        <div class="col-12 inline-flex">
+
+            <div class="col-8">
+                <div class="card h-full">
+                    <div class="col-12 text-center">
+                        <span><strong>Sorteio</strong></span>
+                    </div>
+                    <div class="col-12 text-center">
+                        <img class=""  src="assets/layout/images/jackpot/jackpot.png" usemap="#image-map" />
+                        <map name="image-map">
+                            <area (click)="bigWinStart()" class="cursor-pointer" alt="Botão Sortear" title="Botão Sortear" coords="532,283,564,419" shape="rect">
+                            <area title="nick" alt="nick" coords="100,328,430,418" shape="rect">
+                        </map>
+                        <div class="container-nickPlayer">
+                            <span class="nickPlayer">{{nick}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="col-12 text-center">
+                        <span><strong>Jogadores participantes ( 135 )</strong></span>
+                    </div>
+                    <div class="col-12 noHorizontal">
+                         <span class="p-float-label p-input-icon-right w-full">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="w-full" id="search-player" pInputText>
+                            <label for="search-player">Buscar Jogador</label>
+                        </span>
+                    </div>
+
+                    <div class="col-12 noHorizontal">
+                        <p-table [value]="players" [scrollable]="true" class="tableSort" scrollHeight="400px">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th style="min-width:200px">Nick</th>
+                                    <th style="min-width:200px">Ações</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-player>
+                                <tr>
+                                    <td>{{player.nick}}</td>
+                                    <td>
+                                        <div class="col-12 text-right inline-flex">
+                                            <div class="col-3"></div>
+                                            <div class="col-3"></div>
+                                            <div class="col-3">
+                                                <i style="color:blue" title="Visualizar Jogador"
+                                                   class="pi pi-eye cursor-pointer"></i>
+                                            </div>
+                                            <div class="col-3">
+                                                <i style="color:red" title="Remover jogador"
+                                                   class="pi pi-times cursor-pointer"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
