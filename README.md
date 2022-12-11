@@ -21,10 +21,3 @@ Rode `ng build` para gerar o build final do projeto que vai estar na pasta `dist
 2 - PrimeNg / Sakai ( Template ) \
 3 - Git
 
-## Equipe
-
-Henrique Siqueira \
-Isabella \
-Daniel \
-Eurico Neto \
-Leticia
